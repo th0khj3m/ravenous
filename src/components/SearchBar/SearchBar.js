@@ -8,7 +8,7 @@ const sortByOptions = {
   "Most Reviewed": "review_count",
 };
 
-const SearchBar = ({ searchYelp }) => {
+const SearchBar = () => {
   const [term, setTerm] = useState("");
   const [location, setLocation] = useState("");
   const [sortingOption, setSortingOption] = useState("best_match");
@@ -34,7 +34,7 @@ const SearchBar = ({ searchYelp }) => {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    searchYelp(term, location, sortingOption)
+    // searchYelp(term, location, sortingOption)
   }
 
   const renderSortByOptions = () => {

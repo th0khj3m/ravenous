@@ -1,3 +1,16 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import axios from "axios"; 
 
-const yelpKey = "n2n9ER416YCKMQm6WHriQFVk9gdmVCsS_2C-GA2k7ro7YX4N5hddnayxF19uiqtx0zL5AQ4sUNLcwLeYPlx6lq8eNMgd5d7_88gI1Po84DCCNhc6SHOCFfTLdw_oZHYx";
+
+const YelpApi = ({yelpKey, yelpBaseUrl}) => {
+    const [businesses, setBusinesses] = useState([]);
+
+    useEffect(() => {
+        const fetchBusinesses = async () => {
+            const urlToFetch = `${yelpBaseUrl}/search`;
+            const response = await axios.get(urlToFetch, {
+            
+            });
+        }
+    })
+}
