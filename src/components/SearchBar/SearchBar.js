@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
-import Business from "../Business/Business";
 
 const sortByOptions = {
   "Best Match": "best_match",
@@ -8,7 +7,8 @@ const sortByOptions = {
   "Most Reviewed": "review_count",
 };
 
-const SearchBar = ({ searchYelp }) => {
+const SearchBar = ({searchYelp}) => {
+  
   const [term, setTerm] = useState("");
   const [location, setLocation] = useState("");
   const [sortingOption, setSortingOption] = useState("best_match");
@@ -34,7 +34,7 @@ const SearchBar = ({ searchYelp }) => {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    searchYelp(term, location, sortingOption)
+    searchYelp(term, location, sortingOption);
   }
 
   const renderSortByOptions = () => {
